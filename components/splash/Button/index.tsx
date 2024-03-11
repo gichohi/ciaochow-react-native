@@ -6,11 +6,16 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackNavigatorParams } from "../../../types";
 
 const SplashButton = () => {
-    //const navigation = useNavigation<NativeStackNavigationProp<RootStackNavigatorParams>>();
+    const navigation = useNavigation<NativeStackNavigationProp<RootStackNavigatorParams>>();
 
-    return(
+    const handleClick = () => {
+        navigation.navigate('Login');
+    }
+
+    return (
         <ButtonView>
             <StyledButton
+                onPress={handleClick}
             >
                 <ButtonText>Get Started</ButtonText>
             </StyledButton>

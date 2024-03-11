@@ -40,6 +40,7 @@ export type RootStackNavigatorParams = {
     Login: undefined;
     Register: undefined;
     Home: undefined;
+    Splash: undefined;
   }
 
 export interface TabProps {

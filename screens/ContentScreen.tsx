@@ -24,8 +24,7 @@ const ContentScreen = () => {
     }, []);
 
     const chowsHandler = () => {
-        //const num = Math.floor(Math.random() * 2); 
-        const num = 1;
+        const num = Math.floor(Math.random() * 2); 
         console.log("Index", num);
         getChows(user.token)
         .then((response) => {

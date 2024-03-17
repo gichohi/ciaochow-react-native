@@ -42,7 +42,7 @@ export const registerWithEmail = async (request: RegisterRequest): Promise<ApiRe
 
     const postData = {
         username: request.username,
-        identifier: request.email,
+        email: request.email,
         password: request.password
     }
 

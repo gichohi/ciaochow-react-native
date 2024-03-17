@@ -34,6 +34,7 @@ const ContentScreen = () => {
                     description: response.data[num].attributes.Description,
                     image: BASE_URL + response.data[num].attributes.Image.data[0].attributes.url
                 }
+                console.log("Title", chow.title);
                 console.log("Image", chow.image);
                 chowStore.setChow(chow);
                 

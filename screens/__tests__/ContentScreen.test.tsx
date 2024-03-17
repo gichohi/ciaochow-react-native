@@ -28,7 +28,7 @@ describe('', () => {
     });
 
 
-    it('should display image', async () => {
+    it('should display title and image image', async () => {
 
         const screen = render(
             <NavigationContainer>
@@ -37,13 +37,13 @@ describe('', () => {
         );
 
         const imageTestID = "topImage";
-        const topImage = screen.getByTestId(imageTestID);
 
         const titleTestId = "tabtitle";
         const title = screen.getByTestId(titleTestId);
 
        
         await waitFor(() => {
+            const topImage = screen.getByTestId(imageTestID);
             expect(topImage.props["source"]["uri"]).toBeTruthy();
             expect(title.props["children"]).toBeTruthy();
         });

@@ -5,14 +5,15 @@ import { StyledImage } from "./StyledImage";
 
 const TopImageView = () => {
     const chow = useChowStore((state) => state.chow);
-
-    console.log("Chow Image", chow.image);
-
-    return (
-        <ImageView>
-             <StyledImage testID="topImage" source={{uri: chow.image}}/>
-        </ImageView>
-    )
+    const image = chow.image;
+    console.log("Chow Image", image);
+    if (image != "") {
+        return (
+            <ImageView>
+                <StyledImage testID="topImage" source={{ uri: image }} />
+            </ImageView>
+        )
+    } 
 }
 
 export default TopImageView;

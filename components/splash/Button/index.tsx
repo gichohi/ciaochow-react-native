@@ -15,6 +15,7 @@ const SplashButton = () => {
     return (
         <ButtonView>
             <StyledButton
+                testID="btnSplash"
                 onPress={handleClick}
             >
                 <ButtonText>Get Started</ButtonText>
